@@ -1,4 +1,9 @@
-const title = document.querySelector(".hello h1")
+const loginForm = document.getElementById("login-form")
+const loginInput = loginForm.querySelector("input")
+const loginButton = loginForm.querySelector("button")
 
-title.innerText = "Hello"
-console.log(title)
+function onLoginBtnClick() {
+    return username
+} 
+
+loginButton.addEventListener("click", onLoginBtnClick)
