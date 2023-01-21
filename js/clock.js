@@ -21,7 +21,6 @@ function getClock() {
     const CLOCK = `${hours}:${mins}:${secs}`
 
     clock.innerText = CLOCK
-    console.log(CLOCK)
 }
 
 getClock()
