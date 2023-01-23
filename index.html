@@ -4,28 +4,41 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+        <script src="https://kit.fontawesome.com/ca6c477c8a.js" crossorigin="anonymous"></script>
         <title>Momentum</title>
     </head>
     <body>
+        <h2 id="clock">00:00</h2>
+
         <form id="login-form" class="hidden">
             <input 
+                id="login-input"
                 required
                 maxlength="15"
                 type="text" 
                 placeholder="What is your name?"
             />
-            <input type="submit" value="Login"/>
+            <input id="login-button" type="submit" value="Login"/>
         </form>
-
-        <h2 id="clock">00:00</h2>
 
         <h1 id="greeting" class="hidden"></h1>
 
         <form id="todo-form">
             <input 
                 type="text" 
-                placeholder="Write a TODO and press ENTER"
+                placeholder="Write a To-Do and press ENTER"
             />
+            <button id="add-button">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+            <div class="select">
+                <select class="filter-todos">
+                    <option value="all">All</option>
+                    <option value="completed">Completed</option>
+                    <option value="incompleted">Incompleted</option>
+                </select>
+            </div>
         </form>
         <ul id="todo-list"></ul>
 
@@ -38,7 +51,7 @@
         <script src="js/greetings.js"></script>
         <script src="js/clock.js"></script>
         <script src="js/quotes.js"></script>
-        <script src="js/background.js"></script>
         <script src="js/todo.js"></script>
+        <script src="js/weather.js"></script>
     </body>
 </html>
