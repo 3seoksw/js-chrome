@@ -9,9 +9,14 @@
         <title>Momentum</title>
     </head>
     <body>
+        <div id="weather">
+            <span class="weather-city"></span>
+            <span class="weather-temp"></span>
+        </div>
+
         <h2 id="clock">00:00</h2>
 
-        <form id="login-form" class="hidden">
+        <form class="hidden" id="login-form">
             <input 
                 id="login-input"
                 required
@@ -26,13 +31,14 @@
 
         <form id="todo-form">
             <input 
+                id="todo-input"
                 type="text" 
                 placeholder="Write a To-Do and press ENTER"
             />
-            <button id="add-button">
+            <button class="add-button">
                 <i class="fa-solid fa-plus"></i>
             </button>
-            <div class="select">
+            <div id="select">
                 <select class="filter-todos">
                     <option value="all">All</option>
                     <option value="completed">Completed</option>
