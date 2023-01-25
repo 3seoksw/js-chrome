@@ -14,3 +14,5 @@ Every feature is made with vanilla javascript except for the weather feature usi
 <img width="1265" alt="initial" src="https://user-images.githubusercontent.com/97219959/214262520-d43c60b3-ce04-40ef-8341-22ca931b8512.png">
 <img width="1262" alt="logged" src="https://user-images.githubusercontent.com/97219959/214262531-03742360-c828-49f3-8b72-1cab636ca47e.png">
 <img width="1252" alt="todo_added" src="https://user-images.githubusercontent.com/97219959/214262538-4faa6d2c-1e30-4b19-8383-1d510eab9182.png">
+<img width="1262" alt="filter_complete" src="https://user-images.githubusercontent.com/97219959/214533811-90182ab2-928a-476e-ab7d-6f22fc0d041f.png">
+<img width="1248" alt="filter_incomplete" src="https://user-images.githubusercontent.com/97219959/214533818-66a35bbc-9685-47ba-a203-2994228c917f.png">
