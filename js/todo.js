@@ -85,6 +85,14 @@ function paintTODO(newTODO) {
     todoList.appendChild(li)
 }
 
+function clearTODOs() {
+    console.log("clearing")
+    while (todoList.firstChild) {
+        console.log(todoList.firstChild)
+        todoList.removeChild(todoList.firstChild)
+    }
+}
+
 function handleTODOSubmit(event) {
     event.preventDefault()
     const newTODO = todoInput.value
@@ -100,12 +108,32 @@ function handleTODOSubmit(event) {
     saveTODOs()
 }
 
-function filterTODOs(event) {
-    console.log(event)
+function paintFilteredTODOs(event) {
+    clearTODOs()
+
+    let selected = todoSelect.options[todoSelect.selectedIndex].value
+    if (selected === "incompleted") {
+        selected = false
+    }
+    else if (selected === "completed"){
+        selected = true
+    }
+    else {
+        todos.forEach(paintTODO)
+        todos.forEach(checkboxChecker)
+        return
+    }
+
+    for (let step = 0; step < todos.length; step++) {
+        if (todos[step].completed === selected) {
+            paintTODO(todos[step])
+            checkboxChecker(todos[step])
+        }
+    }
 }
 
 todoForm.addEventListener("submit", handleTODOSubmit)
-todoSelect.addEventListener("select", filterTODOs)
+todoSelect.addEventListener("change", paintFilteredTODOs)
 
 const savedTODOs = localStorage.getItem(TODOS_KEY)
 
